@@ -77,7 +77,7 @@ func printDiagnostics(w http.ResponseWriter) {
   json.NewEncoder(w).Encode(a)
 }
 
-func handlerDiag(w http.ResponseWriter, r *http.Request) {
+func HandlerDiag(w http.ResponseWriter, r *http.Request) {
 		http.Header.Add(w.Header(), "content-type", "application/json")
 
 		parts := strings.Split(r.URL.Path, "/")

@@ -29,9 +29,9 @@ func main() {
 
 	} //these run functions based in the url/whats written after /
 	http.HandleFunc("/", handlerNil)
-	http.HandleFunc("/conservation/v1/country", oblig1.handlerCountry)
-	http.HandleFunc("/conservation/v1/species", oblig1.handlerSpecies)
-	http.HandleFunc("/conservation/v1/diag", oblig1.handlerDiag)
+	http.HandleFunc("/conservation/v1/country", oblig1.HandlerCountry)
+	http.HandleFunc("/conservation/v1/species", oblig1.HandlerSpecies)
+	http.HandleFunc("/conservation/v1/diag", oblig1.HandlerDiag)
 	fmt.Println("Listening on port " + port)
 	log.Fatal(http.ListenAndServe(":" + port, nil))
 }

@@ -9,7 +9,7 @@ type Species struct {
 	Genus     string `json:"genus"`
 	SciName   string `json:"sciName"`
 	CanName   string `json:"canName"`
-	Year      int    `json:"year"`
+	Year      string `json:"year"`
 }
 
 
