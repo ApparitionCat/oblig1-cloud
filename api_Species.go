@@ -84,7 +84,7 @@ func replyWithAllSpecies(w http.ResponseWriter, DB SpeciesStorage) {
 
 func replyWithSpecies(w http.ResponseWriter,DB SpeciesStorage, id string) {    //replies with a specific species
 
-	var singleFetch Species														// Temporary variable used for storing species
+	    var singleFetch Species														// Temporary variable used for storing species
 		url := "http://api.gbif.org/v1/species/" + id			                // Uses the url combined with id to find species
 		resp, err := http.Get(url)												// gets url
 		if err != nil {
@@ -109,7 +109,7 @@ func replyWithSpecies(w http.ResponseWriter,DB SpeciesStorage, id string) {    /
 			return																// Error handler, returns code 404 not found.
 		}
 		json.NewEncoder(w).Encode(s)											// Prints relevant info as JSON to website
-}
+        }
 
 
 func HandlerSpecies(w http.ResponseWriter, r *http.Request) {

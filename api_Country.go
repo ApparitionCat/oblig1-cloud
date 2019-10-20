@@ -124,6 +124,7 @@ func HandlerCountry(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		if parts[4] == "" {											// If 4th section does not contain counry code:part is empty it will reply with all countries
+		replyWithAllCountries(w, &DBc)
 		} else {												    //otherwise it replies with one
 			replyWithCountry(w, &DBc, parts[4], limit)
 		}
